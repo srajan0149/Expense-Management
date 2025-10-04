@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,6 +25,22 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        {/* 👇 Added Employee & Manager Links */}
+        <div className="flex flex-col gap-4 mt-6 w-full sm:flex-row">
+          <Link
+            href="/employee"
+            className="rounded-lg border border-gray-300 dark:border-gray-700 px-6 py-3 text-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
+          >
+            👨‍💼 Employee Dashboard
+          </Link>
+          <Link
+            href="/manager"
+            className="rounded-lg border border-gray-300 dark:border-gray-700 px-6 py-3 text-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
+          >
+            👔 Manager Dashboard
+          </Link>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
